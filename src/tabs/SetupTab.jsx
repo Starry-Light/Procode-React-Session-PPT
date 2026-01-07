@@ -50,15 +50,12 @@ node --version
 
         <pre className="code-block">
           <code>{`# 1. Create a new React project
-npm create vite@latest my-react-app -- --template react
+npm create vite@latest
 
-# 2. Navigate into the project
-cd my-react-app
-
-# 3. Install dependencies
+# 2. Install dependencies
 npm install
 
-# 4. Start the development server
+# 3. Start the development server
 npm run dev`}</code>
         </pre>
 

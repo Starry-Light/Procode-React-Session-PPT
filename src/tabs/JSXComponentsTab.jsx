@@ -7,7 +7,7 @@ function JSXComponentsTab() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <div style={{ padding: 20, fontFamily: 'system-ui' }}>
+    <div>
       <h1>Hello, {name}! 👋</h1>
       <p>Welcome to our session.</p>
       <p>The year is: {currentYear}</p>
@@ -21,11 +21,7 @@ function JSXComponentsTab() {
     '/App.js': `// Each function is a Component!
 function Header() {
   return (
-    <header style={{ 
-      background: '#228be6', 
-      color: 'white', 
-      padding: 20 
-    }}>
+    <header>
       <h1>My App</h1>
     </header>
   );
@@ -33,7 +29,7 @@ function Header() {
 
 function MainContent() {
   return (
-    <main style={{ padding: 20 }}>
+    <main>
       <h2>Welcome!</h2>
       <p>This is the main content area.</p>
     </main>
@@ -42,11 +38,7 @@ function MainContent() {
 
 function Footer() {
   return (
-    <footer style={{ 
-      background: '#f8f9fa', 
-      padding: 20,
-      marginTop: 20 
-    }}>
+    <footer>
       <p>© 2024 My App</p>
     </footer>
   );
@@ -55,7 +47,7 @@ function Footer() {
 // The App combines all components
 export default function App() {
   return (
-    <div style={{ fontFamily: 'system-ui' }}>
+    <div>
       <Header />
       <MainContent />
       <Footer />

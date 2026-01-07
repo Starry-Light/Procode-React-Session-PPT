@@ -6,28 +6,6 @@ function WhyReactTab() {
 <html>
 <head>
   <title>Counter - Vanilla JS</title>
-  <style>
-    body { 
-      font-family: system-ui; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px;
-    }
-    h1 { color: #333; }
-    button {
-      padding: 12px 24px;
-      font-size: 18px;
-      cursor: pointer;
-      margin: 8px;
-    }
-    #count {
-      font-size: 48px;
-      font-weight: bold;
-      color: #228be6;
-      margin: 20px 0;
-    }
-  </style>
 </head>
 <body>
   <h1>Vanilla JS Counter</h1>
@@ -65,35 +43,14 @@ export default function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div style={{ 
-      fontFamily: 'system-ui',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      padding: 40
-    }}>
+    <div>
       <h1>React Counter</h1>
-      <div style={{ 
-        fontSize: 48, 
-        fontWeight: 'bold', 
-        color: '#228be6',
-        margin: '20px 0'
-      }}>
+      <div>
         {count}
       </div>
       <div>
-        <button 
-          onClick={() => setCount(count - 1)}
-          style={{ padding: '12px 24px', fontSize: 18, margin: 8 }}
-        >
-          -
-        </button>
-        <button 
-          onClick={() => setCount(count + 1)}
-          style={{ padding: '12px 24px', fontSize: 18, margin: 8 }}
-        >
-          +
-        </button>
+        <button onClick={() => setCount(count - 1)}> - </button>
+        <button onClick={() => setCount(count + 1)}> + </button>
       </div>
     </div>
   );
