@@ -41,69 +41,12 @@ export default function App() {
     </div>
   );
 }`,
-  }
+      '/index.js': `import React from 'react';
+  import { createRoot } from 'react-dom/client';
+  import App from './App';
 
-  const fetchExample = {
-    '/App.js': `import { useState, useEffect } from 'react';
-
-export default function App() {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [userId, setUserId] = useState(1);
-
-  useEffect(() => {
-    // Start loading
-    setLoading(true);
-    
-    // Fetch data from external API
-    fetch(\`https://jsonplaceholder.typicode.com/users/\${userId}\`)
-      .then(response => response.json())
-      .then(data => {
-        setUser(data);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error(err);
-        setLoading(false);
-      });
-  }, [userId]);  // Re-fetch when userId changes
-
-  return (
-    <div style={{ padding: 20, fontFamily: 'system-ui' }}>
-      <h1>Fetch User Data 👤</h1>
-      
-      <div style={{ marginBottom: 20 }}>
-        <label>User ID: </label>
-        <select 
-          value={userId} 
-          onChange={(e) => setUserId(Number(e.target.value))}
-          style={{ padding: 8 }}
-        >
-          {[1,2,3,4,5].map(id => (
-            <option key={id} value={id}>User {id}</option>
-          ))}
-        </select>
-      </div>
-
-      {loading ? (
-        <p>Loading... ⏳</p>
-      ) : user ? (
-        <div style={{ 
-          background: '#f8f9fa', 
-          padding: 20, 
-          borderRadius: 8 
-        }}>
-          <h2>{user.name}</h2>
-          <p>📧 {user.email}</p>
-          <p>🏢 {user.company?.name}</p>
-          <p>📍 {user.address?.city}</p>
-        </div>
-      ) : (
-        <p>Failed to load user</p>
-      )}
-    </div>
-  );
-}`,
+  const root = createRoot(document.getElementById('root'));
+  root.render(<App />);`,
   }
 
   const dependencyExample = {
@@ -169,6 +112,12 @@ export default function App() {
     </div>
   );
 }`,
+      '/index.js': `import React from 'react';
+  import { createRoot } from 'react-dom/client';
+  import App from './App';
+
+  const root = createRoot(document.getElementById('root'));
+  root.render(<App />);`,
   }
 
   return (

@@ -157,9 +157,33 @@ export default function App() {
           </div>
         </div>
 
-        <div style={{ marginBottom: 32 }}>
+        <div style={{ marginBottom: 32,justifySelf:'center' }}>
           <img 
             src="/renderAndCommit.png" 
+            alt="React render and commit cycle diagram" 
+            style={{ 
+              maxWidth: '100%', 
+              borderRadius: 12, 
+              boxShadow: '0 2px 8px rgba(0,0,0,0.1)' 
+            }}
+          />
+        </div>
+
+      <section className="section">
+        <h2 className="section-title">Virtual Dom</h2>
+        <p className="section-description">
+          The Virtual DOM is React's secret weapon for performance. Instead of directly manipulating 
+          the real DOM (which is slow), React creates a lightweight JavaScript copy of the DOM tree. 
+          When state changes, React compares the new virtual DOM with the previous one, calculates 
+          the minimal set of changes needed, and then efficiently updates only those specific parts 
+          of the real DOM. This process, called "reconciliation," makes React blazingly fast even 
+          with complex UIs.
+        </p>
+        </section>
+
+        <div style={{ marginBottom: 32,justifySelf:'center' }}>
+          <img 
+            src="/virtualDom.png" 
             alt="React render and commit cycle diagram" 
             style={{ 
               maxWidth: '100%', 
