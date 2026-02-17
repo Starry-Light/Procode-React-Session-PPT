@@ -2,6 +2,7 @@ import { useState } from 'react'
 import SessionMenu from './components/SessionMenu'
 import ReactSessionApp from './sessions/react/ReactSessionApp'
 import BackendDevOpsSessionApp from './sessions/backend-devops/BackendDevOpsSessionApp'
+import SystemDesignSessionApp from './sessions/system-design/SystemDesignSessionApp'
 import './App.css'
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
 
   if (activeSession === 'backend-devops') {
     return <BackendDevOpsSessionApp onBackToMenu={handleBackToMenu} />
+  }
+
+  if (activeSession === 'system-design') {
+    return <SystemDesignSessionApp onBackToMenu={handleBackToMenu} />
   }
 
   return null

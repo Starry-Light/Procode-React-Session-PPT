@@ -83,19 +83,19 @@ body {
   text-align: center;
   margin-bottom: var(--spacing-xl);
   padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .app-title {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #ffffff;
   margin-bottom: var(--spacing-xs);
 }
 
 .app-subtitle {
   font-size: 1rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
 }
 
@@ -106,7 +106,7 @@ body {
 .tab-navigation {
   display: flex;
   gap: var(--spacing-xs);
-  background: var(--bg-secondary);
+  background: rgba(15, 23, 42, 0.6);
   padding: var(--spacing-xs);
   border-radius: var(--radius-lg);
   margin-bottom: var(--spacing-xl);
@@ -118,7 +118,7 @@ body {
   padding: var(--spacing-sm) var(--spacing-md);
   border: none;
   background: transparent;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.6);
   font-family: var(--font-sans);
   font-size: 0.875rem;
   font-weight: 500;
@@ -129,14 +129,14 @@ body {
 }
 
 .tab-button:hover {
-  background: var(--bg-tertiary);
-  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .tab-button.active {
-  background: var(--bg-primary);
-  color: var(--accent);
-  box-shadow: var(--shadow-sm);
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.5);
 }
 
 .tab-number {
@@ -559,9 +559,9 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: var(--bg-primary);
+  background: #0f1729;
   padding: var(--spacing-lg) var(--spacing-xl);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -616,25 +616,25 @@ body {
   opacity: 0.98;
 }
 
-/* Backend session orange theme */
+/* Backend session red theme */
 .backend-welcome .welcome-gradient {
-  background: linear-gradient(135deg, #1a0f08 0%, #c2410c 50%, #f59e0b 100%);
+  background: linear-gradient(135deg, #1a0808 0%, #dc2626 50%, #ef4444 100%);
 }
 
 .backend-welcome .welcome-highlight {
-  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  background: linear-gradient(90deg, #ef4444, #f87171);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .backend-welcome .welcome-cta {
-  background: #f59e0b;
+  background: #ef4444;
   color: white;
 }
 
 .backend-welcome .welcome-cta:hover {
-  background: #d97706;
+  background: #dc2626;
 }
 
 .welcome-particles {
@@ -1051,7 +1051,7 @@ body {
 .back-to-menu-btn {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.7);
   padding: var(--spacing-xs) var(--spacing-md);
   border-radius: var(--radius-md);
   font-family: var(--font-sans);
@@ -1064,7 +1064,7 @@ body {
 
 .back-to-menu-btn:hover {
   background: rgba(255, 255, 255, 0.15);
-  color: var(--text-primary);
+  color: rgba(255, 255, 255, 0.95);
   border-color: rgba(255, 255, 255, 0.3);
 }
 

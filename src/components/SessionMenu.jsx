@@ -13,6 +13,13 @@ function SessionMenu({ onSessionSelect }) {
       icon: '',
       description: 'Understand backend systems, servers, and deployment workflows',
       color: '#00d084'
+    },
+    {
+      id: 'system-design',
+      title: 'System Design 101',
+      icon: '🏗️',
+      description: 'Master databases, architectures, CAP theorem, CDNs & more — get interview ready!',
+      color: '#8b5cf6'
     }
   ]
 
