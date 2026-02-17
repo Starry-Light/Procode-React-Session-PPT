@@ -616,6 +616,27 @@ body {
   opacity: 0.98;
 }
 
+/* Backend session orange theme */
+.backend-welcome .welcome-gradient {
+  background: linear-gradient(135deg, #1a0f08 0%, #c2410c 50%, #f59e0b 100%);
+}
+
+.backend-welcome .welcome-highlight {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.backend-welcome .welcome-cta {
+  background: #f59e0b;
+  color: white;
+}
+
+.backend-welcome .welcome-cta:hover {
+  background: #d97706;
+}
+
 .welcome-particles {
   position: absolute;
   inset: 0;
@@ -705,6 +726,17 @@ body {
   font-weight: 700;
   margin-bottom: var(--spacing-md);
   background: linear-gradient(90deg, #ffffff, #3cd1fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(0 0 30px rgba(97, 218, 251, 0.5));
+}
+.backend-welcome-react-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(90deg, #ffffff, #faae3c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -833,3 +865,267 @@ body {
     padding-top: 200px;
   }
 }
+
+/* ===========================================
+   Session Menu Styles
+   =========================================== */
+
+.session-menu-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.session-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.session-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  opacity: 0.98;
+}
+
+.session-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.session-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: var(--spacing-xl);
+  max-width: 1200px;
+  width: 100%;
+}
+
+.session-header {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.session-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.session-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 20px rgba(97, 218, 251, 0.4));
+}
+
+.session-main-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.session-highlight {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.session-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: #ffffff;
+}
+
+.session-description {
+  font-size: 1.125rem;
+  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.session-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+  padding: 0 var(--spacing-md);
+}
+
+.session-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.session-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--session-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.session-card:hover::before {
+  transform: scaleX(1);
+}
+
+.session-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--session-color);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.session-card-icon {
+  font-size: 3.5rem;
+  margin-bottom: var(--spacing-md);
+  filter: drop-shadow(0 4px 15px rgba(255, 255, 255, 0.2));
+}
+
+.session-card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: #ffffff;
+}
+
+.session-card-description {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: var(--spacing-lg);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.session-card-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: white;
+  color: #1a1a2e;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-sans);
+}
+
+.session-card-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.session-card-button svg {
+  transition: transform 0.3s ease;
+}
+
+.session-card:hover .session-card-button svg {
+  transform: translateX(5px);
+}
+
+/* Back to Menu Button */
+.back-to-menu-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-muted);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: var(--spacing-md);
+}
+
+.back-to-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-content {
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive Session Menu */
+@media (max-width: 768px) {
+  .session-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .session-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .session-description {
+    font-size: 1rem;
+  }
+  
+  .session-cards {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .session-card-icon {
+    font-size: 2.5rem;
+  }
+  
+  .session-card-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Step details styling for backend/devops tabs */
+.step-details {
+  margin-top: var(--spacing-md);
+}
+
+.step-details h4 {
+  color: inherit;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.step-details ol,
+.step-details ul {
+  color: inherit;
+}
+
+.info-box {
+  margin-top: var(--spacing-md);
+}
+
