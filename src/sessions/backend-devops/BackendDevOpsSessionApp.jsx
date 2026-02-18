@@ -7,6 +7,7 @@ import JWTOAuthTab from './tabs/JWTOAuthTab'
 import ArchitectureTab from './tabs/ArchitectureTab'
 import WhyDockerTab from './tabs/WhyDockerTab'
 import MLOpsTab from './tabs/MLOpsTab'
+import DockerSetupTab from './tabs/DockerSetupTab'
 
 const tabs = [
   { id: 'welcome', label: 'Welcome', component: WelcomeTab, isWelcome: true },
@@ -14,6 +15,7 @@ const tabs = [
   { id: 'jwt-oauth', label: 'JWT & OAuth', component: JWTOAuthTab },
   { id: 'architecture', label: 'Modern Architecture', component: ArchitectureTab },
   { id: 'why-docker', label: 'Why Docker?', component: WhyDockerTab },
+  { id: 'using-docker', label: 'Using Docker', component: DockerSetupTab },
   { id: 'mlops', label: 'MLOps', component: MLOpsTab },
 ]
 
