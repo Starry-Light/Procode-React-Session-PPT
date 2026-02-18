@@ -12,7 +12,7 @@ function SessionMenu() {
     {
       id: 'backend-devops',
       title: 'Deployment 101',
-      icon: '',
+      icon: '⚙️',
       description: 'Understand backend systems, servers, and deployment workflows',
       color: '#00d084'
     },
