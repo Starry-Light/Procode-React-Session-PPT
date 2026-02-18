@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import SessionMenu from './components/SessionMenu'
 import ReactSessionApp from './sessions/react/ReactSessionApp'
 import BackendDevOpsSessionApp from './sessions/backend-devops/BackendDevOpsSessionApp'
@@ -6,35 +6,14 @@ import SystemDesignSessionApp from './sessions/system-design/SystemDesignSession
 import './App.css'
 
 function App() {
-  const [activeSession, setActiveSession] = useState(null)
-
-  const handleSessionSelect = (sessionId) => {
-    setActiveSession(sessionId)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
-  const handleBackToMenu = () => {
-    setActiveSession(null)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
-  if (!activeSession) {
-    return <SessionMenu onSessionSelect={handleSessionSelect} />
-  }
-
-  if (activeSession === 'react') {
-    return <ReactSessionApp onBackToMenu={handleBackToMenu} />
-  }
-
-  if (activeSession === 'backend-devops') {
-    return <BackendDevOpsSessionApp onBackToMenu={handleBackToMenu} />
-  }
-
-  if (activeSession === 'system-design') {
-    return <SystemDesignSessionApp onBackToMenu={handleBackToMenu} />
-  }
-
-  return null
+  return (
+    <Routes>
+      <Route path="/" element={<SessionMenu />} />
+      <Route path="/react" element={<ReactSessionApp />} />
+      <Route path="/backend-devops" element={<BackendDevOpsSessionApp />} />
+      <Route path="/system-design" element={<SystemDesignSessionApp />} />
+    </Routes>
+  )
 }
 
 export default App

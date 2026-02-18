@@ -1,4 +1,6 @@
-function SessionMenu({ onSessionSelect }) {
+import { Link } from 'react-router-dom'
+
+function SessionMenu() {
   const sessions = [
     {
       id: 'react',
@@ -59,10 +61,10 @@ function SessionMenu({ onSessionSelect }) {
 
         <div className="session-cards">
           {sessions.map((session) => (
-            <div 
+            <Link 
               key={session.id} 
+              to={`/${session.id}`}
               className="session-card"
-              onClick={() => onSessionSelect(session.id)}
               style={{ '--session-color': session.color }}
             >
               <div className="session-card-icon">{session.icon}</div>
@@ -74,7 +76,7 @@ function SessionMenu({ onSessionSelect }) {
                   <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </button>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

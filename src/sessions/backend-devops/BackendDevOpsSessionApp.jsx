@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import TabNavigation from './components/TabNavigation'
 import WelcomeTab from './tabs/WelcomeTab'
 import WhatHappensTab from './tabs/WhatHappensTab'
@@ -16,7 +17,8 @@ const tabs = [
   { id: 'mlops', label: 'MLOps', component: MLOpsTab },
 ]
 
-function BackendDevOpsSessionApp({ onBackToMenu }) {
+function BackendDevOpsSessionApp() {
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('welcome')
   const [headerVisible, setHeaderVisible] = useState(false)
   const lastScrollY = useRef(0)
@@ -71,7 +73,7 @@ function BackendDevOpsSessionApp({ onBackToMenu }) {
     <div className={`app-container ${isWelcomeTab ? 'welcome-active' : ''}`}>
       <div className={`app-chrome ${headerVisible ? 'visible' : 'hidden'}`}>
         <header className="app-header">
-          <button className="back-to-menu-btn" onClick={onBackToMenu}>
+          <button className="back-to-menu-btn" onClick={() => navigate('/')}>
             ← Sessions
           </button>
           <div className="header-content">

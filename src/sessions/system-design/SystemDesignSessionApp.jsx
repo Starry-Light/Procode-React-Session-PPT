@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import TabNavigation from './components/TabNavigation'
 import WelcomeTab from './tabs/WelcomeTab'
 import SqlNoSqlTab from './tabs/SqlNoSqlTab'
@@ -20,7 +21,8 @@ const tabs = [
   { id: 'cdn', label: 'CDN', component: CdnTab },
 ]
 
-function SystemDesignSessionApp({ onBackToMenu }) {
+function SystemDesignSessionApp() {
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('welcome')
   const [headerVisible, setHeaderVisible] = useState(false)
   const lastScrollY = useRef(0)
@@ -72,7 +74,7 @@ function SystemDesignSessionApp({ onBackToMenu }) {
     <div className={`app-container ${isWelcomeTab ? 'welcome-active' : ''}`}>
       <div className={`app-chrome ${headerVisible ? 'visible' : 'hidden'}`}>
         <header className="app-header">
-          <button className="back-to-menu-btn" onClick={onBackToMenu}>
+          <button className="back-to-menu-btn" onClick={() => navigate('/')}>
             ← Sessions
           </button>
           <div className="header-content">
