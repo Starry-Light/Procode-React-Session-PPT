@@ -4,12 +4,16 @@ import WelcomeTab from './tabs/WelcomeTab'
 import WhatHappensTab from './tabs/WhatHappensTab'
 import JWTOAuthTab from './tabs/JWTOAuthTab'
 import ArchitectureTab from './tabs/ArchitectureTab'
+import WhyDockerTab from './tabs/WhyDockerTab'
+import DockerSetupTab from './tabs/DockerSetupTab'
 
 const tabs = [
   { id: 'welcome', label: 'Welcome', component: WelcomeTab, isWelcome: true },
   { id: 'what-happens', label: 'What Happens When...', component: WhatHappensTab },
   { id: 'jwt-oauth', label: 'JWT & OAuth', component: JWTOAuthTab },
   { id: 'architecture', label: 'Modern Architecture', component: ArchitectureTab },
+  { id: 'why-docker', label: 'Why Docker?', component: WhyDockerTab },
+  { id: 'docker-setup', label: 'Docker Setup', component: DockerSetupTab },
 ]
 
 function BackendDevOpsSessionApp({ onBackToMenu }) {
